@@ -1,0 +1,110 @@
+/* Styles personnalisés pour ajuster le comportement des colonnes */
+@media (max-width: 768px) {
+    aside {
+        flex: 1 100%;
+        margin-bottom: 1rem;
+    }
+    main {
+        flex: 1 100%;
+    }
+}
+.image-container {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 50%; /* Rétrécit l'image à 50% de la largeur du conteneur parent */
+    height: auto; /* Maintient les proportions */
+    margin-right: 15px; /* Espace entre l'image et la légende */
+    border: 1px solid #ddd; /* Optionnel : bordure pour l'image */
+    border-radius: 5px; /* Bordures arrondies pour l'image */
+}
+
+.image-container figcaption {
+    flex: 1; /* Prend l'espace restant à droite */
+    background-color: #f8f9fa; /* Fond légèrement grisé */
+    padding: 10px; /* Espacement interne */
+    border: 1px solid #ddd; /* Bordure */
+    border-radius: 5px; /* Bordures arrondies */
+    font-size: 14px; /* Taille de police */
+    color: #555; /* Couleur de texte */
+}
+
+/* Style du cadre du menu */
+aside {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    font-family: Arial, sans-serif;
+}
+
+aside h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+}
+
+/* Menu déroulant */
+.nav {
+    list-style-type: none;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative; /* Pour permettre le positionnement des sous-menus */
+    margin-bottom: 5px;
+}
+
+.nav-link {
+    display: block;
+    padding: 10px;
+    background-color: #e9ecef;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #ced4da;
+}
+
+/* Style des sous-menus (cachés par défaut) */
+.nav-item ul {
+    display: none; /* Sous-menu caché par défaut */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%; /* Positionné juste en dessous de l'élément parent */
+    left: 0;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    z-index: 1000;
+}
+
+.nav-item ul li {
+    margin: 0;
+}
+
+.nav-item ul li a {
+    padding: 8px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav-item ul li a:hover {
+    background-color: #ced4da;
+}
+
+/* Affiche le sous-menu au survol */
+.nav-item:hover ul {
+    display: block;
+}
